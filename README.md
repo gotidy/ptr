@@ -6,6 +6,21 @@
 
 `go get github.com/gotidy/ptr`
 
+## Examples
+
+This code:
+
+```go
+p := ptr.Int(10)
+```
+
+is the equivalent for:
+
+```go
+i := int(10)
+p := &i  
+```
+
 ## Documentation
 
 [GoDoc](http://godoc.org/github.com/gotidy/ptr)
