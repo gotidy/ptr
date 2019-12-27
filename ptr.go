@@ -55,7 +55,7 @@ func Byte(v byte) *byte {
 	return &v
 }
 
-// Byte returns pointer to byte value
+// Rune returns pointer to byte value
 func Rune(v rune) *rune {
 	return &v
 }
