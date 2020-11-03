@@ -153,3 +153,11 @@ func ToDurationDef(v *time.Duration, def time.Duration) time.Duration {
 	}
 	return *v
 }
+
+// ToTimeDef returns the value of the time.Time pointer passed in or default value if the pointer is nil.
+func ToTimeDef(v *time.Time, def time.Time) time.Time {
+	if v == nil {
+		return def
+	}
+	return *v
+}

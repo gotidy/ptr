@@ -87,3 +87,7 @@ func TestComplex128(t *testing.T) {
 func TestDuration(t *testing.T) {
 	equal(t, time.Second, *Duration(time.Second))
 }
+
+func TestTime(t *testing.T) {
+	equal(t, time.Date(2001, 2, 3, 4, 5, 6, 7, time.UTC), *Time(time.Date(2001, 2, 3, 4, 5, 6, 7, time.UTC)))
+}

@@ -154,3 +154,11 @@ func ToDuration(v *time.Duration) time.Duration {
 	}
 	return *v
 }
+
+// ToTime returns the value of the time.Time pointer passed in or Time{} if the pointer is nil.
+func ToTime(v *time.Time) time.Time {
+	if v == nil {
+		return time.Time{}
+	}
+	return *v
+}

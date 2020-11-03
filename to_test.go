@@ -99,3 +99,8 @@ func TestToDuration(t *testing.T) {
 	equal(t, time.Second, ToDuration(Duration(time.Second)))
 	equal(t, time.Duration(0), ToDuration(nil))
 }
+
+func TestToTime(t *testing.T) {
+	equal(t, time.Date(2001, 2, 3, 4, 5, 6, 7, time.UTC), ToTime(Time(time.Date(2001, 2, 3, 4, 5, 6, 7, time.UTC))))
+	equal(t, time.Time{}, ToTime(nil))
+}

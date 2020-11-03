@@ -92,7 +92,12 @@ func Complex128(v complex128) *complex128 {
 	return &v
 }
 
-// Duration returns pointer to bool value.
+// Duration returns pointer to time.Duration value.
 func Duration(v time.Duration) *time.Duration {
+	return &v
+}
+
+// Time returns pointer to time.Time value.
+func Time(v time.Time) *time.Time {
 	return &v
 }
