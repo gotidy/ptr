@@ -1,5 +1,7 @@
 package ptr
 
+import "time"
+
 // ToInt returns the value of the int pointer passed in or int if the pointer is nil.
 // ToInt returns the value of the int pointer passed in or 0 if the pointer is nil.
 func ToInt(v *int) int {
@@ -89,7 +91,7 @@ func ToByte(v *byte) byte {
 	return *v
 }
 
-// ToRune returns the value of the byte pointer passed in or 0 if the pointer is nil.
+// ToRune returns the value of the rune pointer passed in or 0 if the pointer is nil.
 func ToRune(v *rune) rune {
 	if v == nil {
 		return 0
@@ -105,7 +107,7 @@ func ToBool(v *bool) bool {
 	return *v
 }
 
-// ToString returns the value of the bool pointer passed in or empty string if the pointer is nil.
+// ToString returns the value of the string pointer passed in or empty string if the pointer is nil.
 func ToString(v *string) string {
 	if v == nil {
 		return ""
@@ -113,7 +115,7 @@ func ToString(v *string) string {
 	return *v
 }
 
-// ToFloat32 returns the value of the bool pointer passed in or 0 if the pointer is nil.
+// ToFloat32 returns the value of the float32 pointer passed in or 0 if the pointer is nil.
 func ToFloat32(v *float32) float32 {
 	if v == nil {
 		return 0
@@ -121,7 +123,7 @@ func ToFloat32(v *float32) float32 {
 	return *v
 }
 
-// ToFloat64 returns the value of the bool pointer passed in or 0 if the pointer is nil.
+// ToFloat64 returns the value of the float64 pointer passed in or 0 if the pointer is nil.
 func ToFloat64(v *float64) float64 {
 	if v == nil {
 		return 0
@@ -129,7 +131,7 @@ func ToFloat64(v *float64) float64 {
 	return *v
 }
 
-// ToComplex64 returns the value of the bool pointer passed in or 0 if the pointer is nil.
+// ToComplex64 returns the value of the complex64 pointer passed in or 0 if the pointer is nil.
 func ToComplex64(v *complex64) complex64 {
 	if v == nil {
 		return 0
@@ -137,8 +139,16 @@ func ToComplex64(v *complex64) complex64 {
 	return *v
 }
 
-// ToComplex128 returns the value of the bool pointer passed in or 0 if the pointer is nil.
+// ToComplex128 returns the value of the complex128 pointer passed in or 0 if the pointer is nil.
 func ToComplex128(v *complex128) complex128 {
+	if v == nil {
+		return 0
+	}
+	return *v
+}
+
+// ToDuration returns the value of the time.Duration pointer passed in or 0 if the pointer is nil.
+func ToDuration(v *time.Duration) time.Duration {
 	if v == nil {
 		return 0
 	}

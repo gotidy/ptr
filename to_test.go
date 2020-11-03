@@ -2,6 +2,7 @@ package ptr
 
 import (
 	"testing"
+	"time"
 )
 
 func TestToInt(t *testing.T) {
@@ -92,4 +93,9 @@ func TestToComplex64(t *testing.T) {
 func TestToComplex128(t *testing.T) {
 	equal(t, complex(float64(10.0), float64(100.0)), ToComplex128(Complex128(complex(float64(10.0), float64(100.0)))))
 	equal(t, complex(float64(0.0), float64(0.0)), ToComplex128(nil))
+}
+
+func TestToDuration(t *testing.T) {
+	equal(t, time.Second, ToDuration(Duration(time.Second)))
+	equal(t, time.Duration(0), ToDuration(nil))
 }

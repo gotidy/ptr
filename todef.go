@@ -1,5 +1,7 @@
 package ptr
 
+import "time"
+
 // ToIntDef returns the value of the int pointer passed in or default value if the pointer is nil.
 func ToIntDef(v *int, def int) int {
 	if v == nil {
@@ -88,7 +90,7 @@ func ToByteDef(v *byte, def byte) byte {
 	return *v
 }
 
-// ToRuneDef returns the value of the byte pointer passed in or default value if the pointer is nil.
+// ToRuneDef returns the value of the rune pointer passed in or default value if the pointer is nil.
 func ToRuneDef(v *rune, def rune) rune {
 	if v == nil {
 		return def
@@ -104,7 +106,7 @@ func ToBoolDef(v *bool, def bool) bool {
 	return *v
 }
 
-// ToStringDef returns the value of the bool pointer passed in or default value if the pointer is nil.
+// ToStringDef returns the value of the string pointer passed in or default value if the pointer is nil.
 func ToStringDef(v *string, def string) string {
 	if v == nil {
 		return def
@@ -112,7 +114,7 @@ func ToStringDef(v *string, def string) string {
 	return *v
 }
 
-// ToFloat32Def returns the value of the bool pointer passed in or default value if the pointer is nil.
+// ToFloat32Def returns the value of the float32 pointer passed in or default value if the pointer is nil.
 func ToFloat32Def(v *float32, def float32) float32 {
 	if v == nil {
 		return def
@@ -120,7 +122,7 @@ func ToFloat32Def(v *float32, def float32) float32 {
 	return *v
 }
 
-// ToFloat64Def returns the value of the bool pointer passed in or default value if the pointer is nil.
+// ToFloat64Def returns the value of the float64 pointer passed in or default value if the pointer is nil.
 func ToFloat64Def(v *float64, def float64) float64 {
 	if v == nil {
 		return def
@@ -128,7 +130,7 @@ func ToFloat64Def(v *float64, def float64) float64 {
 	return *v
 }
 
-// ToComplex64Def returns the value of the bool pointer passed in or default value if the pointer is nil.
+// ToComplex64Def returns the value of the complex64 pointer passed in or default value if the pointer is nil.
 func ToComplex64Def(v *complex64, def complex64) complex64 {
 	if v == nil {
 		return def
@@ -136,8 +138,16 @@ func ToComplex64Def(v *complex64, def complex64) complex64 {
 	return *v
 }
 
-// ToComplex128Def returns the value of the bool pointer passed in or default value if the pointer is nil.
+// ToComplex128Def returns the value of the complex128 pointer passed in or default value if the pointer is nil.
 func ToComplex128Def(v *complex128, def complex128) complex128 {
+	if v == nil {
+		return def
+	}
+	return *v
+}
+
+// ToDurationDef returns the value of the time.Duration pointer passed in or default value if the pointer is nil.
+func ToDurationDef(v *time.Duration, def time.Duration) time.Duration {
 	if v == nil {
 		return def
 	}
