@@ -5,6 +5,11 @@ import (
 	"time"
 )
 
+func TestTo(t *testing.T) {
+	equal(t, int(10), To(Int(10)))
+	equal(t, int(0), To((*int)(nil)))
+}
+
 func TestToInt(t *testing.T) {
 	equal(t, int(10), ToInt(Int(10)))
 	equal(t, int(0), ToInt(nil))

@@ -12,6 +12,10 @@ func equal(t *testing.T, expected, actual interface{}) {
 	}
 }
 
+func TestOf(t *testing.T) {
+	equal(t, int(10), *Of(10))
+}
+
 func TestInt(t *testing.T) {
 	equal(t, int(10), *Int(10))
 }

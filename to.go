@@ -2,6 +2,15 @@ package ptr
 
 import "time"
 
+// To returns the value of the pointer passed in or the default value if the pointer is nil.
+func To[T any](v *T) T {
+	var zero T
+	if v == nil {
+		return zero
+	}
+	return *v
+}
+
 // ToInt returns the value of the int pointer passed in or int if the pointer is nil.
 // ToInt returns the value of the int pointer passed in or 0 if the pointer is nil.
 func ToInt(v *int) int {

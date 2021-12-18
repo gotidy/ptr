@@ -2,6 +2,8 @@
 
 `ptr` contains functions for simplified creation of pointers from constants of basic types.
 
+Support for generics has been implemented since version 1.4.0. Required 1.18 or later version of Go.
+
 ## Installation
 
 `go get github.com/gotidy/ptr`
@@ -11,7 +13,7 @@
 This code:
 
 ```go
-p := ptr.Int(10)
+p := ptr.Of(10)
 ```
 
 is the equivalent for:

@@ -2,6 +2,11 @@ package ptr
 
 import "time"
 
+// Of returns pointer to value.
+func Of[T any](v T) *T {
+	return &v
+}
+
 // Int returns pointer to int value.
 func Int(v int) *int {
 	return &v

@@ -5,6 +5,11 @@ import (
 	"time"
 )
 
+func TestToDef(t *testing.T) {
+	equal(t, int(10), ToDef(Int(10), 0))
+	equal(t, int(5), ToDef(nil, 5))
+}
+
 func TestToIntDef(t *testing.T) {
 	equal(t, int(10), ToIntDef(Int(10), 0))
 	equal(t, int(5), ToIntDef(nil, 5))
