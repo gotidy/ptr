@@ -11,7 +11,6 @@ func To[T any](v *T) T {
 	return *v
 }
 
-// ToInt returns the value of the int pointer passed in or int if the pointer is nil.
 // ToInt returns the value of the int pointer passed in or 0 if the pointer is nil.
 func ToInt(v *int) int {
 	if v == nil {

@@ -2,7 +2,7 @@ package ptr
 
 import "time"
 
-// ToDef returns the value of the int pointer passed in or default value if the pointer is nil.
+// ToDef returns the value of the pointer passed in or default value if the pointer is nil.
 func ToDef[T any](v *T, def T) T {
 	if v == nil {
 		return def
